@@ -18,16 +18,15 @@ $ npm install @decentapps/piecard
 ```
 
 ```js
-const { PieCard } = require('@decentapps/piecard') // OR
-import { PieCard } from '@decentapps/piecard' // ===> ES6
+const { PieCard } = require('@decentapps/piecard')
 
 const piecard = new PieCard("Client_ID", "Client_Secret", "Access_Token");
 
 // CREATE PAYMENT
 const paymentData = {
   amount: NUMBER, // amount of service
-  memo: "STRING", // memo of the transaction
-  metadata: "STRING" // metadata,
+  memo: STRING, // memo of the transaction
+  metadata: STRING // metadata,
 };
 
 piecard.createPayment(paymentData)
@@ -39,7 +38,7 @@ piecard.createPayment(paymentData)
   });
 
 // GET PAYMENT BY ID
-const paymentId = "STRING" // 63e064aebc26563e677a9ae1
+const paymentId = STRING // 63e064aebc26563e677a9ae1
 piecard.getPaymentById(paymentId)
   .then((response) => {
     console.log("Get payment : ", response);
@@ -65,7 +64,7 @@ Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```console
-$ npm install piecard
+$ npm install @decentapps/piecard
 ```
 
 Follow [our installing guide](https://docs.piecard.app/quick-start)
