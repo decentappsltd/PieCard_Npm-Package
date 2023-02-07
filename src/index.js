@@ -14,6 +14,6 @@
  *   limitations under the License.
  */
 
-const PieCard = require("./lib/piecard");
+const PieCard = require("../lib/piecard");
 
 module.exports = PieCard;

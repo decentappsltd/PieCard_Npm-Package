@@ -7,18 +7,20 @@
   [![NPM Downloads][npm-downloads-image]][npm-downloads-url] -->
 
   # Quick Start
-## Get your API keys
+#### Get your API keys
 
 Your API requests are authenticated using API keys. Any request that doesn't include an API key will return an error. <br/> <br/>
 You can get your API key in your Dashboard at any time, visit to generate and get your keys [developers](https://gateway.piecard.app/) .
 
 
 ```console
-$ npm install piecard
+$ npm install @decentapps/piecard
 ```
 
 ```js
-const { PieCard } = require('piecard')
+const { PieCard } = require('@decentapps/piecard') // OR
+import { PieCard } from '@decentapps/piecard' // ===> ES6
+
 const piecard = new PieCard("Client_ID", "Client_Secret", "Access_Token");
 
 // CREATE PAYMENT
