@@ -1,6 +1,6 @@
 const { PieCard } = require("@decentapps/piecard");
 
-// You can get your keys when you visit "https://gateway.piecard.app"
+// You can get your API keys at "https://gateway.piecard.app"
 const {
   client_id,
   client_secret,
@@ -11,7 +11,7 @@ const {
 const piecard = new PieCard(client_id, client_secret, access_token);
 
 // Get payment
-const paymentId = STRING; // "63d69afe83a1b9fa92b6d05e"
+const paymentId = STRING; // "63e064aebc26563e677a9ae1"
 piecard
   .getPaymentById(paymentId)
   .then((response) => {

@@ -2,14 +2,27 @@
   "name": "piecard_package-example",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "example.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node example.js",
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["example", "piecard", "POS", "transaction"],
+  "Organization": "Pi-eCard",
+  "author": "Duniya Naphtali",
+  "Developer": [
+    {
+      "author": "Duniya Naphtali",
+      "social": {
+        "Email": "naphtaliduniya2@gmail.com",
+        "Twitter": "https://twitter.com/kouqhar",
+        "Instagram": "https://www.instagram.com/_kouqhar",
+        "GitHub": "https://github.com/kouqhar",
+        "Portfolio": "https://naphtaliduniya.netlify.app/"
+      }
+    }
+  ],
   "license": "ISC",
   "dependencies": {
-    "@decentapps/piecard": "^0.0.2"
+    "@decentapps/piecard": "^0.0.4"
   }
 }
