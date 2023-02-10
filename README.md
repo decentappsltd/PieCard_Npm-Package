@@ -10,12 +10,16 @@
 #### Get your API keys
 
 Your API requests are authenticated using API keys. Any request that doesn't include an API key will return an error. <br/> <br/>
-You can get your API key in your Dashboard at any time, visit to generate and get your keys [developers](https://gateway.piecard.app/) .
+> __You can get your API key in your Dashboard at any time, visit to _GENERATE_ or _GET_ your keys here ===> [developers](https://gateway.piecard.app) .__
 
+<br />
+
+  [See an example of how to use our package](example)
 
 ```console
 $ npm install @decentapps/piecard
 ```
+<br />
 
 ```js
 const { PieCard } = require('@decentapps/piecard')
@@ -24,9 +28,9 @@ const piecard = new PieCard("Client_ID", "Client_Secret", "Access_Token");
 
 // CREATE PAYMENT
 const paymentData = {
-  amount: NUMBER, // amount of service
+  amount: NUMBER, // amount of service >= 0
   memo: STRING, // memo of the transaction
-  metadata: STRING // metadata,
+  metadata: OBJECT // key-value pairs of metadata
 };
 
 piecard.createPayment(paymentData)
@@ -48,6 +52,7 @@ piecard.getPaymentById(paymentId)
   });
 
 ```
+
 
 ## Installation
 
@@ -122,7 +127,7 @@ $ npm test
 
 The original author of PieCard is [Duniya Naphtali](https://github.com/kouqhar)
 
-The current lead maintainers are [Oliver Crockett](https://github.com/orgs/decentappsltd/people/olivercrockett) and [Duniya Naphtali](https://github.com/kouqhar)
+The current lead maintainers are [Oliver Crockett](https://github.com/olivercrockett) and [Duniya Naphtali](https://github.com/kouqhar)
 
 ## License
 

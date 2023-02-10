@@ -3,3 +3,4 @@ node_modules
 test.js
 features.js
 package-lock.json
+example/config/keys/keys.js
