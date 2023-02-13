@@ -10,7 +10,7 @@ const {
 // Initialization
 const piecard = new PieCard(client_id, client_secret, access_token);
 
-// Get payment
+// GET PAYMENT
 const paymentId = STRING; // "63e064aebc26563e677a9ae1"
 piecard
   .getPaymentById(paymentId)
@@ -19,7 +19,7 @@ piecard
   })
   .catch((err) => console.log("Get payment error : ", err));
 
-// Create payment
+// CREATE PAYMENT
 const paymentData = {
   amount: 5,
   memo: "Payment for soccer voucher",
@@ -35,10 +35,11 @@ piecard
   })
   .catch((err) => console.log("New payment error : ", err));
 
-const encryptedData = STRING; // "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJldmVudF90eXBlIjoicGF5bWVudC5jb21wbGV0ZWQiLCJjcmVhdGVkIjoiMjAyMy0wMi0xMlQxOTo1MTo1MS4yMTZaIiwicGF5bWVudCI6eyJpZCI6IjYzYmZlNmFhNmZhN2JmMDUxOTU0ZTdkZiIsImFtb3VudCI6MTAwLCJjbGllbnQiOiJvbGl2ZXJtYzMiLCJtZW1vIjoidGVzdCIsInNhbmRib3giOmZhbHNlLCJtZXRhZGF0YSI6eyJpZCI6IjEyMyJ9LCJzdWNjZXNzIjp0cnVlfSwiaWF0IjoxNjc2MjMxNTExfQ.q-iRL0-O3Ud_oxVZLehQZTq6THwTtnDhsi99aqBEtl8"
+// GET A SECURE PAYMENT PAYLOAD
+const encryptedData = STRING; // See "./keys_sample" for example data
 piecard
-  .validate(encryptedData)
+  ._decryptPayment(encryptedData)
   .then((response) => {
-    console.log("Validate : ", response);
+    console.log("Decrypted response : ", response);
   })
-  .catch((err) => console.log("Validate error : ", err));
+  .catch((err) => console.log("Decrypting error : ", err));

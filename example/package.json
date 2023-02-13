@@ -4,9 +4,14 @@
   "description": "",
   "main": "example.js",
   "scripts": {
-    "start": "node example.js",
+    "start": "node example.js"
   },
-  "keywords": ["example", "piecard", "POS", "transaction"],
+  "keywords": [
+    "example",
+    "piecard",
+    "POS",
+    "transaction"
+  ],
   "Organization": "Pi-eCard",
   "author": "Duniya Naphtali",
   "Developer": [
@@ -23,6 +28,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@decentapps/piecard": "^0.0.4"
+    "@decentapps/piecard": "^0.0.6"
   }
 }

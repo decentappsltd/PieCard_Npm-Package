@@ -10,20 +10,19 @@
 #### Get your API keys
 
 Your API requests are authenticated using API keys. Any request that doesn't include an API key will return an error. <br/> <br/>
-> __You can get your API key in your Dashboard at any time, visit to _GENERATE_ or _GET_ your keys here ===> [developers](https://gateway.piecard.app) .__
+
+> You can get your API keys in your dashboard at any time, visit to _generate_ or _get_ your keys here => [developers](https://gateway.piecard.app) .
 
 <br />
 
   [See an example of how to use our package](example)
 
-```console
-$ npm install @decentapps/piecard
-```
 <br />
 
 ```js
 const { PieCard } = require('@decentapps/piecard')
 
+// Initialization
 const piecard = new PieCard("Client_ID", "Client_Secret", "Access_Token");
 
 // CREATE PAYMENT
