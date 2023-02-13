@@ -28,6 +28,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "@decentapps/piecard": "^0.1.0"
+    "@decentapps/piecard": "^0.1.1"
   }
 }
