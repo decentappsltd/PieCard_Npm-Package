@@ -26,8 +26,8 @@
       }
     }
   ],
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@decentapps/piecard": "^0.1.1"
+    "@decentapps/piecard": "^0.1.2"
   }
 }

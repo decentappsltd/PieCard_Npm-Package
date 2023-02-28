@@ -9,7 +9,7 @@ const Request = async (reqOptions) => {
     if (typeof result?.status === "number" && result?.status === 200)
       return result?.data;
     else {
-      if (index === 10) {
+      if (index === 1) {
         index = 0;
         return result?.data;
       } else {
@@ -18,7 +18,7 @@ const Request = async (reqOptions) => {
       }
     }
   } catch (error) {
-    console.log("Loop request Error : ", error);
+    throw new Error("Loop request Error : ", error);
   }
 };
 
@@ -32,8 +32,7 @@ const httpReq = async (reqOptions) => {
       result = response;
     }
   } catch (error) {
-    console.log("error : ", error);
-    return error;
+    throw new Error("error : ", error);
   }
 
   return result;

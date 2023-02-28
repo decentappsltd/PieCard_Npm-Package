@@ -11,7 +11,7 @@
 
 Your API requests are authenticated using API keys. Any request that doesn't include an API key will return an error. <br/> <br/>
 
-> You can get your API keys in your dashboard at any time, visit to _generate_ or _get_ your keys here => [developers](https://gateway.piecard.app) .
+> You can get your API keys in your dashboard at any time, visit [developers](https://gateway.piecard.app) to _generate_ or _get_ your keys.
 
 <br />
 
@@ -49,6 +49,15 @@ piecard.getPaymentById(paymentId)
   .catch((err) => {
     console.log("Get payment error : ", err);
   });
+
+// GET A SECURE PAYMENT PAYLOAD
+const encryptedData = STRING;
+piecard
+  ._decryptPayment(encryptedData)
+  .then((response) => {
+    console.log("Decrypted response : ", response);
+  })
+  .catch((err) => console.log("Decrypting error : ", err));
 
 ```
 
