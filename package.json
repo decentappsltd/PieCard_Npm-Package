@@ -1,6 +1,6 @@
 {
   "name": "@decentapps/piecard",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official npm package of PieCard, Pi eCard is the easy POS (Point of Sale) system for the Pi Network, enabling in-person vendors and Pioneers to invoice others without the need to type in long public keys. The status of the payment can be seen at any stage by both the vendor and the client",
   "keywords": [
     "web",
