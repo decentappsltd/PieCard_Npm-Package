@@ -10,14 +10,14 @@ const {
 // Initialization
 const piecard = new PieCard(client_id, client_secret, access_token);
 
-// GET PAYMENT
+// GET PAYMENT BY ID
 const paymentId = STRING; // "63e064aebc26563e677a9ae1"
 piecard
   .getPaymentById(paymentId)
   .then((response) => {
-    console.log("Get Payment : ", response);
+    console.log("Returned Payment : ", response);
   })
-  .catch((err) => console.log("Get payment error : ", err));
+  .catch((err) => console.log("Geting payment error : ", err));
 
 // CREATE PAYMENT
 const paymentData = {
@@ -31,15 +31,15 @@ const paymentData = {
 piecard
   .createPayment(paymentData)
   .then((response) => {
-    console.log("Create Payment : ", response);
+    console.log("Created Payment : ", response);
   })
-  .catch((err) => console.log("New payment error : ", err));
+  .catch((err) => console.log("Creating payment error : ", err));
 
 // GET A SECURE PAYMENT PAYLOAD
 const encryptedData = STRING; // See "./keys_sample" for example data
 piecard
   ._decryptPayment(encryptedData)
   .then((response) => {
-    console.log("Decrypted response : ", response);
+    console.log("Decrypted payment response : ", response);
   })
-  .catch((err) => console.log("Decrypting error : ", err));
+  .catch((err) => console.log("Decrypting payment error : ", err));

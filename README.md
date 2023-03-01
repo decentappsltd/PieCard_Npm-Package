@@ -32,19 +32,21 @@ const paymentData = {
   metadata: OBJECT // key-value pairs of metadata
 };
 
-piecard.createPayment(paymentData)
-  .then((response) => {
-    console.log("Create payment : ", response);
+piecard
+  .createPayment(paymentData)
+   .then((result) => {
+     console.log("Create payment response : ", result);
   })
   .catch((err) => {
-    console.log("Create payment error : ", err);
+    console.log("Response error : ", err);
   });
 
 // GET PAYMENT BY ID
 const paymentId = STRING // 63e064aebc26563e677a9ae1
-piecard.getPaymentById(paymentId)
-  .then((response) => {
-    console.log("Get payment : ", response);
+piecard
+  .getPaymentById(paymentId)
+  .then((result) => {
+  	console.log("Get payment : ", result);
   })
   .catch((err) => {
     console.log("Get payment error : ", err);
@@ -54,10 +56,12 @@ piecard.getPaymentById(paymentId)
 const encryptedData = STRING;
 piecard
   ._decryptPayment(encryptedData)
-  .then((response) => {
-    console.log("Decrypted response : ", response);
+   .then((result) => {
+     console.log("Decrypted Payment response : ", result);
   })
-  .catch((err) => console.log("Decrypting error : ", err));
+  .catch((err) => {
+    console.log("Decrypting Payment error : ", err);
+  });
 
 ```
 
@@ -102,6 +106,7 @@ for more information.
   * [#piecard](https://twitter.com/pi_ecard) on [twitter Chat](https://mobile.twitter.com/pi_ecard) @piecard
   * [GitHub Organization](https://github.com/decentappsltd) for Official Middleware & Modules
   * [Twitter Group](https://twitter.com/decentappsltd) for discussion
+  * [Discord Server](https://discord.gg/mzvR6vcfc6) for events and discussion
   * [Contact](https://decentapps.co.uk/contact.html) for support and discussion
 
 

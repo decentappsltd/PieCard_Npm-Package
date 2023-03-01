@@ -1,4 +1,4 @@
-const axios = require("axios");
+const axios = require("axios")
 const gatewayURI = `https://api.piecard.app`
 
 const axiosRequest = async (reqOptions) => {
@@ -9,16 +9,16 @@ const axiosRequest = async (reqOptions) => {
       defaultOptions["headers"] = { ...reqOptions[key] };
     else defaultOptions[key] = reqOptions[key];
   }
-  return axios(defaultOptions)
-    .then((response) => {
-      if (response.status === 200) {
+  return await axios(defaultOptions)
+    .then(response => {
+      if (response?.status === 200) {
         const detailText = {
           status: response?.status,
           data: response?.data,
         };
         return detailText;
       }
-    })
+     })
     .catch((error) => {
       const detailText = {
         status: error?.response?.status,

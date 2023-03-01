@@ -9,7 +9,7 @@ const Request = async (reqOptions) => {
     if (typeof result?.status === "number" && result?.status === 200)
       return result?.data;
     else {
-      if (index === 1) {
+      if (index === 0) {
         index = 0;
         return result?.data;
       } else {
@@ -26,11 +26,8 @@ const httpReq = async (reqOptions) => {
   let result;
   try {
     const response = await Request(reqOptions);
-    if (!response) {
-      result = response;
-    } else {
-      result = response;
-    }
+    if (!response) result = response;
+    else result = response;
   } catch (error) {
     throw new Error("error : ", error);
   }
