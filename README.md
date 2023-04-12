@@ -52,6 +52,21 @@ piecard
     console.log("Get payment error : ", err);
   });
 
+// SEND PI FROM APP TO USER (APP-TO-USER TRANSACTION)
+const appToUserData = {
+  amount: NUMBER, // Will be deducted from your wallet, plus the 0.02 Pi fee
+  recipient: STRING, // Either Pi Username OR Wallet Address
+  wallet_public_key: STRING, // Your Mainnet wallet address
+  wallet_secret_key: STRING, // We will never see or store this
+  memo: STRING, // Optional - this will appear on the blockchain
+};
+piecard
+  .makePaymentToUser(appToUserData)
+  .then((response) => {
+    console.log("Pi Payment response : ", response);
+  })
+  .catch((err) => console.log("Sending pi to user error : ", err));
+
 // GET A SECURE PAYMENT PAYLOAD
 const encryptedData = STRING;
 piecard

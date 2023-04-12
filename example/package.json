@@ -28,6 +28,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@decentapps/piecard": "^0.2.0"
+    "@decentapps/piecard": "^0.2.1"
   }
 }
